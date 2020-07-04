@@ -1,8 +1,9 @@
 import express, { Application } from "express";
-import moment from "moment";
 import compression from "compression";
 import helmet from "helmet";
 import { connect } from "mongoose";
+
+import { logDbSuccess, logServerStart } from "./helpers/";
 
 if (process.env.NODE_ENV !== "production") {
   require("dotenv").config();
@@ -16,10 +17,8 @@ const PORT = process.env.PORT ?? "5000";
 const DB_URI = process.env.MONGO_URI ?? "localdb";
 
 connect(DB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() =>
-    console.log(`${moment().format()}: Connection to database success`)
-  )
-  .catch((err) => console.error(err));
+  .then(logDbSuccess)
+  .catch((err) => console.error(err)); //TODO: handle connection errors
 
 // Middlewares
 app.use(helmet());
@@ -29,8 +28,4 @@ app.use(express.json());
 app.get("/", (req, res) => res.send("Hello"));
 
 // start server
-app.listen(PORT, () =>
-  console.log(
-    `${moment().format()}: Server running on http://localhost:${PORT}`
-  )
-);
+app.listen(PORT, logServerStart(PORT));
