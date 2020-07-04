@@ -20,16 +20,16 @@ This API is free. However, to prevent harmful activity, there is a rate limit of
 
 #### Character Attributes
 
-| Attribute  |  Type   | Description                                     |
-| ---------- | :-----: | ----------------------------------------------- |
-| id         | integer | Unique Id per character                         |
-| name       | string  | A character's full name                         |
-| birthday   | string  | A character's birthday                          |
-| occupation |  array  | List of character's known occupation            |
-| img        | string  | Character's image (as jpg)                      |
-| status     | string  | Are they alive(or did Heisenberg get to them??) |
-| nickname   | string  | A known nickname they are refered as            |
-| appearance |  array  | List of seasons that the character appeared in  |
+| Attribute   |  Type   | Description                                    |
+| ----------- | :-----: | ---------------------------------------------- |
+| id          | integer | Unique Id per character                        |
+| name        | string  | A character's full name                        |
+| portrayed   | string  | A character's actor full name                  |
+| occupation  |  array  | List of character's known occupation           |
+| image       | string  | Character's image (as jpg)                     |
+| status      | string  | Are they alive?                                |
+| nickname    | string  | A known nickname they are refered as           |
+| appearances |  array  | List of seasons that the character appeared in |
 
 #### Get all characters
 
@@ -95,7 +95,8 @@ Notice the 'plus sign' between the first and last name represents a space. This 
 ## Built With
 
 - [Express](https://expressjs.com/) - Fast, unopinionated, minimalist web framework for Node.js
-- [Maven](https://www.heroku.com/) - PaaS that enables developers to build, run, and operate applications entirely in the cloud.
+- [MongoDB](https://www.mongodb.com/) - The database for modern applications
+- [Heroku](https://www.heroku.com/) - PaaS that enables developers to build, run, and operate applications entirely in the cloud.
 
 ## Contributing
 
