@@ -2,9 +2,7 @@
 
 ## Documentation
 
-Welcome to the Casa de Papel (Money Heist)! This documentation will supply
-with you all the information you need to start making your HTTP
-requests on this iconic TV-series. Give our documentation a read before you get started on your project!
+Welcome to the Casa de Papel (Money Heist)! This documentation will supply with you all the information you need to start making your HTTP requests on this iconic TV-series. Give our documentation a read before you get started on your project!
 
 Bella Ciao.
 

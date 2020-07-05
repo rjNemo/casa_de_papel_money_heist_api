@@ -11,6 +11,7 @@ router.get("/", async (_, res) => {
   res.json(episode);
 });
 
+/** Get an episode by ID */
 router.get("/:id", async (req, res) => {
   try {
     const episode = await Episode.findById(req.params.id);
