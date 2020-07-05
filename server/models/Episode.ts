@@ -13,7 +13,7 @@ const EpisodeSchema = new Schema({
     type: Number,
     required: true,
   },
-  airDate: {
+  air_date: {
     type: String,
     required: true,
   },
