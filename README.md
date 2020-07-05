@@ -2,9 +2,7 @@
 
 ## Documentation
 
-Welcome to the Casa de Papel (Money Heist)! This documentation will supply
-with you all the information you need to start making your HTTP
-requests on this iconic TV-series. Give our documentation a read before you get started on your project!
+Welcome to the Casa de Papel (Money Heist)! This documentation will supply with you all the information you need to start making your HTTP requests on this iconic TV-series. Give our documentation a read before you get started on your project!
 
 Bella Ciao.
 
@@ -20,41 +18,41 @@ This API is free. However, to prevent harmful activity, there is a rate limit of
 
 #### Character Attributes
 
-| Attribute  |  Type   | Description                                     |
-| ---------- | :-----: | ----------------------------------------------- |
-| id         | integer | Unique Id per character                         |
-| name       | string  | A character's full name                         |
-| birthday   | string  | A character's birthday                          |
-| occupation |  array  | List of character's known occupation            |
-| img        | string  | Character's image (as jpg)                      |
-| status     | string  | Are they alive(or did Heisenberg get to them??) |
-| nickname   | string  | A known nickname they are refered as            |
-| appearance |  array  | List of seasons that the character appeared in  |
+| Attribute   |  Type   | Description                                    |
+| ----------- | :-----: | ---------------------------------------------- |
+| id          | integer | Unique Id per character                        |
+| name        | string  | A character's full name                        |
+| portrayed   | string  | A character's actor full name                  |
+| occupation  |  array  | List of character's known occupation           |
+| image       | string  | Character's image (as jpg)                     |
+| status      | string  | Are they alive?                                |
+| nickname    | string  | A known nickname they are refered as           |
+| appearances |  array  | List of seasons that the character appeared in |
 
 #### Get all characters
 
 Endpoint to retrieve information from all characters.
 
 ```
-/api/characters
+/api/v1/characters
 ```
 
 #### Get single character
 
 ```
-/api/characters/1
+/api/v1/characters/1
 ```
 
 #### Get a random character
 
 ```
-/api/character/random
+/api/v1/character/random
 ```
 
 #### Get paginated characters
 
 ```
-/api/characters?limit=10&offset=10
+/api/v1/characters?limit=10&offset=10
 ```
 
 This request would give you an array of 10 characters, starting at index 10 (the 11th id).
@@ -62,7 +60,7 @@ This request would give you an array of 10 characters, starting at index 10 (the
 #### Get specific character by name
 
 ```
-/api/characters?name=Raquel+Murillo
+/api/v1/characters?name=Raquel+Murillo
 ```
 
 Notice the 'plus sign' between the first and last name represents a space. This query only works with the full name of a character. Double check your spelling!
@@ -83,19 +81,20 @@ Notice the 'plus sign' between the first and last name represents a space. This 
 #### Get all episodes
 
 ```
-/api/episodes
+/api/v1/episodes
 ```
 
 #### Get an episode by id
 
 ```
-/api/episodes/id
+/api/v1/episodes/id
 ```
 
 ## Built With
 
 - [Express](https://expressjs.com/) - Fast, unopinionated, minimalist web framework for Node.js
-- [Maven](https://www.heroku.com/) - PaaS that enables developers to build, run, and operate applications entirely in the cloud.
+- [MongoDB](https://www.mongodb.com/) - The database for modern applications
+- [Heroku](https://www.heroku.com/) - PaaS that enables developers to build, run, and operate applications entirely in the cloud.
 
 ## Contributing
 
