@@ -1,6 +1,7 @@
 import { Router } from "express";
 
 import Character from "../../models/Character";
+import * as ERRORS from "../../constants/errors";
 
 const router = Router();
 
@@ -16,7 +17,7 @@ router.get("/:id", async (req, res) => {
     const chars = await Character.findById(req.params.id);
     res.json(chars);
   } catch (error) {
-    res.status(404).json({ error: "Character not found." });
+    res.status(404).json({ error: ERRORS.CHARACTER_NOT_FOUND });
   }
 });
 
