@@ -4,9 +4,10 @@ import Episode from "../../models/Episode";
 
 const router = Router();
 
+/** Fetch all episodes */
 router.get("/", async (_, res) => {
-  const chars = await Episode.find();
-  res.json(chars);
+  const episode = await Episode.find();
+  res.json(episode);
 });
 
 /** Post a episode. TODO: accessible only after admin authentication */
